@@ -19,6 +19,9 @@ public class Main
 {
 	public static void main(String[] args) throws IOException
 	{
+		FileWriter fw1, fw2, fw3, fw4, fw5, fw6, fw7;
+      PrintWriter pw1, pw2, pw3, pw4, pw5, pw6, pw7; 
+		
 		Time timer = new Time();
 		
 		int minVars = 1;
@@ -37,13 +40,16 @@ public class Main
 		
 		int repetitions = 10;
 		
+		
+		/*
+		
+		// Test 1, full cubic test.
+		System.out.println("\tTest 1 starting...\n");
+		fw1 = new FileWriter("./test1.txt", true);
+      pw1 = new PrintWriter(fw1);
+		
 		try
 		{
-			/*
-			// Test 1, full cubic test.
-			System.out.println("\tTest 1 starting...\n");
-			FileWriter fw1 = new FileWriter("./test1.txt", true);
-	      PrintWriter pw1 = new PrintWriter(fw1);
 			for(int v=minVars; v<maxVars; ++v)
 			{
 				for(int p=minPoly; p<maxPoly; ++p)
@@ -64,10 +70,6 @@ public class Main
 					}
 				}
 			}
-			pw1.close();
-			fw1.close();
-			System.out.println("\tTest 1 ended.\n");
-			*/
 		}
 		catch(Throwable e)
 		{
@@ -75,19 +77,32 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw1.close();
+			fw1.close();
+			System.out.println("\tTest 1 ended.\n");
+		}
+		
+		*/
 		
 		
 		
 		
 		
 		
+		
+		
+		
+		
+		
+		// Test 2, quadratic test vars-poly.
+		System.out.println("\tTest 2 starting...\n");
+		fw2 = new FileWriter("./test2.txt", true);
+      pw2 = new PrintWriter(fw2);
+   	
 		try
 		{
-			// Test 2, quadratic test vars-poly.
-			System.out.println("\tTest 2 starting...\n");
-			FileWriter fw2 = new FileWriter("./test2.txt", true);
-	      PrintWriter pw2 = new PrintWriter(fw2);
-	      
 	      pw2.println("");
 	      pw2.println("Test 2");
 	      pw2.println("Quadratic test, Vars - Poly");
@@ -140,10 +155,6 @@ public class Main
 	   		}
 	   		pw2.println("");
 	      }
-			
-			pw2.close();
-			fw2.close();
-			System.out.println("\tTest 2 ended.\n");
 		}
 		catch(Throwable e)
 		{
@@ -151,6 +162,12 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw2.close();
+			fw2.close();
+			System.out.println("\tTest 2 ended.\n");
+		}
 		
 		
 		
@@ -161,14 +178,14 @@ public class Main
 		
 		
 		
+		
+		// Test 3, quadratic test vars-degr.
+		System.out.println("\tTest 3 starting...\n");
+		fw3 = new FileWriter("./test3.txt", true);
+      pw3 = new PrintWriter(fw3);
 		
 		try
 		{
-			// Test 3, quadratic test vars-degr.
-			System.out.println("\tTest 3 starting...\n");
-			FileWriter fw3 = new FileWriter("./test3.txt", true);
-	      PrintWriter pw3 = new PrintWriter(fw3);
-	      
 	      pw3.println("");
 	      pw3.println("Test 3");
 	      pw3.println("Quadratic test, Vars - Degr");
@@ -221,10 +238,6 @@ public class Main
 	   		}
 	      	pw3.println("");
 	      }
-	      
-			pw3.close();
-			fw3.close();
-			System.out.println("\tTest 3 ended.\n");
 		}
 		catch(Throwable e)
 		{
@@ -232,6 +245,12 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw3.close();
+			fw3.close();
+			System.out.println("\tTest 3 ended.\n");
+		}
 		
 		
 		
@@ -240,14 +259,16 @@ public class Main
 		
 		
 		
+		
+		
+		
+		// Test 4, quadratic test poly-degr.
+		System.out.println("\tTest 4 starting...\n");
+		fw4 = new FileWriter("./test4.txt", true);
+      pw4 = new PrintWriter(fw4);
 		
 		try
 		{
-			// Test 4, quadratic test poly-degr.
-			System.out.println("\tTest 4 starting...\n");
-			FileWriter fw4 = new FileWriter("./test4.txt", true);
-	      PrintWriter pw4 = new PrintWriter(fw4);
-	      
 	      pw4.println("");
 	      pw4.println("Test 4");
 	      pw4.println("Quadratic test, Poly - Degr");
@@ -300,10 +321,6 @@ public class Main
 	   		}
 	      	pw4.println("");
 	      }
-	      
-			pw4.close();
-			fw4.close();
-			System.out.println("\tTest 4 ended.\n");
 		}
 		catch(Throwable e)
 		{
@@ -311,6 +328,16 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw4.close();
+			fw4.close();
+			System.out.println("\tTest 4 ended.\n");
+		}
+		
+		
+		
+		
 		
 		
 		
@@ -337,13 +364,14 @@ public class Main
 		
 		
 		
+		
+		// Test 5, linear test poly.
+		System.out.println("\tTest 5 starting...\n");
+		fw5 = new FileWriter("./test5.txt", true);
+      pw5 = new PrintWriter(fw5);
+		
 		try
 		{
-			// Test 5, linear test poly.
-			System.out.println("\tTest 5 starting...\n");
-			FileWriter fw5 = new FileWriter("./test5.txt", true);
-	      PrintWriter pw5 = new PrintWriter(fw5);
-	      
 	      pw5.println("");
 	      pw5.println("Test 5");
 	      pw5.println("Linear test, Poly");
@@ -384,10 +412,6 @@ public class Main
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d + "\ttime: " + average ));
 				pw5.println(p + "\t" + average);
 			}
-	      
-			pw5.close();
-			fw5.close();
-			System.out.println("\tTest 5 ended.\n");
 		}
 		catch(Throwable e)
 		{
@@ -395,6 +419,12 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw5.close();
+			fw5.close();
+			System.out.println("\tTest 5 ended.\n");
+		}
 		
 		
 		
@@ -407,14 +437,13 @@ public class Main
 		
 		
 		
-		
+		// Test 6, linear test vars.
+		System.out.println("\tTest 6 starting...\n");
+		fw6 = new FileWriter("./test6.txt", true);
+      pw6 = new PrintWriter(fw6);
+      
 		try
 		{
-			// Test 6, linear test vars.
-			System.out.println("\tTest 6 starting...\n");
-			FileWriter fw6 = new FileWriter("./test6.txt", true);
-	      PrintWriter pw6 = new PrintWriter(fw6);
-	      
 	      pw6.println("");
 	      pw6.println("Test 6");
 	      pw6.println("Linear test, Vars");
@@ -455,10 +484,6 @@ public class Main
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d + "\ttime: " + average ));
 				pw6.println(v + "\t" + average);
 			}
-	      
-			pw6.close();
-			fw6.close();
-			System.out.println("\tTest 6 ended.\n");
 		}
 		catch(Throwable e)
 		{
@@ -466,6 +491,12 @@ public class Main
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+		finally
+		{
+			pw6.close();
+			fw6.close();
+			System.out.println("\tTest 6 ended.\n");
+		}
 		
 		
 		
@@ -475,14 +506,14 @@ public class Main
 		
 		
 		
+		
+		// Test 7, linear test degr.
+		System.out.println("\tTest 7 starting...\n");
+		fw7 = new FileWriter("./test7.txt", true);
+	   pw7 = new PrintWriter(fw7);
 		
 		try
 		{
-			// Test 7, linear test degr.
-			System.out.println("\tTest 7 starting...\n");
-			FileWriter fw7 = new FileWriter("./test7.txt", true);
-		   PrintWriter pw7 = new PrintWriter(fw7);
-		   
 		   pw7.println("");
 		   pw7.println("Test 7");
 		   pw7.println("Linear test, Degr");
@@ -523,16 +554,18 @@ public class Main
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d + "\ttime: " + average ));
 				pw7.println(d + "\t" + average);
 			}
-		   
-			pw7.close();
-			fw7.close();
-			System.out.println("\tTest 7 ended.\n");
 		}
 		catch(Throwable e)
 		{
 			System.out.println("An exception occured in test 7:");
 			System.out.println(e.getMessage());
 			e.printStackTrace();
+		}
+		finally
+		{
+			pw7.close();
+			fw7.close();
+			System.out.println("\tTest 7 ended.\n");
 		}
 		
 		
