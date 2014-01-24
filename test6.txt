@@ -1,0 +1,23 @@
+v: 1	p: 5	d: 5	time: 3412
+v: 2	p: 5	d: 5	time: 3415
+v: 3	p: 5	d: 5	time: 3423
+v: 4	p: 5	d: 5	time: 34874
+An exception occured in test 6:
+Java heap spacejava.lang.OutOfMemoryError: Java heap space
+Test 6
+Linear test, Vars
+minVars: 1 maxVars: 10
+minPoly: 1 maxPoly: 10
+minDegr: 1 maxDegr: 10
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed values vary as:
+Vars: 5
+Poly: 5
+Degr: 5
+
+
+Vars	Time
+1	59721
+2	59724
+3	59729

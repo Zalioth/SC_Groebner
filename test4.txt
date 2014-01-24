@@ -1,0 +1,110 @@
+v: 1	p: 1	d: 1	time: 2127
+v: 1	p: 1	d: 2	time: 2128
+v: 1	p: 1	d: 3	time: 2131
+v: 1	p: 1	d: 4	time: 2132
+v: 1	p: 1	d: 5	time: 2134
+v: 1	p: 2	d: 1	time: 2137
+v: 1	p: 2	d: 2	time: 2139
+v: 1	p: 2	d: 3	time: 2141
+v: 1	p: 2	d: 4	time: 2144
+v: 1	p: 2	d: 5	time: 2146
+v: 1	p: 3	d: 1	time: 2148
+v: 1	p: 3	d: 2	time: 2149
+v: 1	p: 3	d: 3	time: 2151
+v: 1	p: 3	d: 4	time: 2154
+v: 1	p: 3	d: 5	time: 2158
+v: 1	p: 4	d: 1	time: 2161
+v: 1	p: 4	d: 2	time: 2163
+v: 1	p: 4	d: 3	time: 2166
+v: 1	p: 4	d: 4	time: 2169
+v: 1	p: 4	d: 5	time: 2172
+v: 1	p: 5	d: 1	time: 2175
+v: 1	p: 5	d: 2	time: 2176
+v: 1	p: 5	d: 3	time: 2178
+v: 1	p: 5	d: 4	time: 2180
+v: 1	p: 5	d: 5	time: 2184
+v: 3	p: 1	d: 1	time: 2187
+v: 3	p: 1	d: 2	time: 2188
+v: 3	p: 1	d: 3	time: 2190
+v: 3	p: 1	d: 4	time: 2192
+v: 3	p: 1	d: 5	time: 2194
+v: 3	p: 2	d: 1	time: 2195
+v: 3	p: 2	d: 2	time: 2197
+v: 3	p: 2	d: 3	time: 2200
+v: 3	p: 2	d: 4	time: 2201
+v: 3	p: 2	d: 5	time: 2206
+v: 3	p: 3	d: 1	time: 2210
+v: 3	p: 3	d: 2	time: 2213
+v: 3	p: 3	d: 3	time: 2215
+v: 3	p: 3	d: 4	time: 2218
+v: 3	p: 3	d: 5	time: 2229
+v: 3	p: 4	d: 1	time: 2237
+v: 3	p: 4	d: 2	time: 2239
+v: 3	p: 4	d: 3	time: 2241
+v: 3	p: 4	d: 4	time: 2246
+v: 3	p: 4	d: 5	time: 2253
+v: 3	p: 5	d: 1	time: 2257
+v: 3	p: 5	d: 2	time: 2258
+v: 3	p: 5	d: 3	time: 2261
+v: 3	p: 5	d: 4	time: 2266
+v: 3	p: 5	d: 5	time: 2270
+v: 5	p: 1	d: 1	time: 2273
+v: 5	p: 1	d: 2	time: 2273
+v: 5	p: 1	d: 3	time: 2275
+v: 5	p: 1	d: 4	time: 2276
+v: 5	p: 1	d: 5	time: 2278
+v: 5	p: 2	d: 1	time: 2281
+v: 5	p: 2	d: 2	time: 2285
+v: 5	p: 2	d: 3	time: 2287
+v: 5	p: 2	d: 4	time: 2291
+v: 5	p: 2	d: 5	time: 2295
+v: 5	p: 3	d: 1	time: 2297
+v: 5	p: 3	d: 2	time: 2299
+v: 5	p: 3	d: 3	time: 2300
+An exception occured in test 4:
+Java heap space
+java.lang.OutOfMemoryError: Java heap space
+	at java.math.MutableBigInteger.<init>(Unknown Source)
+	at java.math.BigInteger.remainder(Unknown Source)
+	at java.math.BigInteger.mod(Unknown Source)
+	at edu.jas.arith.ModInteger.<init>(ModInteger.java:42)
+	at edu.jas.arith.ModInteger.multiply(ModInteger.java:477)
+	at edu.jas.arith.ModInteger.multiply(ModInteger.java:19)
+	at edu.jas.poly.GenPolynomial.scaleSubtractMultiple(GenPolynomial.java:1129)
+	at edu.jas.gb.ReductionAbstract.SPolynomial(ReductionAbstract.java:80)
+	at edu.jas.gb.GroebnerBaseSeq.GB(GroebnerBaseSeq.java:133)
+	at edu.jas.gb.GroebnerBaseAbstract.GB(GroebnerBaseAbstract.java:298)
+	at Main.calculateGroebnerBase(Main.java:568)
+	at Main.main(Main.java:284)
+Test 4
+Quadratic test, Poly - Degr
+minVars: 1 maxVars: 6
+minPoly: 1 maxPoly: 6
+minDegr: 1 maxDegr: 6
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed value varies as:
+minFixed: 1 maxFixed: 6
+With an increment of 2
+
+fixed: 1
+p-d	1	2	3	4	5
+1	59586	59587	59588	59589	59590
+2	59591	59592	59594	59597	59599
+3	59599	59602	59604	59604	59606
+4	59606	59607	59607	59607	59609
+5	59611	59613	59616	59620	59624
+
+fixed: 3
+p-d	1	2	3	4	5
+1	59624	59627	59629	59632	59634
+2	59635	59637	59639	59642	59643
+3	59643	59646	59647	59651	59652
+4	59656	59659	59661	59663	59668
+5	59673	59674	59675	59677	59681
+
+fixed: 5
+p-d	1	2	3	4	5
+1	59683	59685	59687	59689	59693
+2	59694	59695	59697	59699	59700
+3	59700	59701	59709

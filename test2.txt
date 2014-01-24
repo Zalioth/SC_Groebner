@@ -1,0 +1,75 @@
+v: 1	p: 1	d: 1	time: 137
+v: 1	p: 2	d: 1	time: 148
+v: 1	p: 3	d: 1	time: 153
+v: 1	p: 4	d: 1	time: 158
+v: 1	p: 5	d: 1	time: 162
+v: 2	p: 1	d: 1	time: 166
+v: 2	p: 2	d: 1	time: 170
+v: 2	p: 3	d: 1	time: 175
+v: 2	p: 4	d: 1	time: 178
+v: 2	p: 5	d: 1	time: 183
+v: 3	p: 1	d: 1	time: 186
+v: 3	p: 2	d: 1	time: 190
+v: 3	p: 3	d: 1	time: 193
+v: 3	p: 4	d: 1	time: 197
+v: 3	p: 5	d: 1	time: 202
+v: 4	p: 1	d: 1	time: 206
+v: 4	p: 2	d: 1	time: 209
+v: 4	p: 3	d: 1	time: 212
+v: 4	p: 4	d: 1	time: 217
+v: 4	p: 5	d: 1	time: 221
+v: 5	p: 1	d: 1	time: 224
+v: 5	p: 2	d: 1	time: 225
+v: 5	p: 3	d: 1	time: 227
+v: 5	p: 4	d: 1	time: 232
+v: 5	p: 5	d: 1	time: 234
+v: 1	p: 1	d: 3	time: 239
+v: 1	p: 2	d: 3	time: 241
+v: 1	p: 3	d: 3	time: 242
+v: 1	p: 4	d: 3	time: 244
+v: 1	p: 5	d: 3	time: 245
+v: 2	p: 1	d: 3	time: 249
+v: 2	p: 2	d: 3	time: 252
+v: 2	p: 3	d: 3	time: 255
+v: 2	p: 4	d: 3	time: 257
+v: 2	p: 5	d: 3	time: 261
+v: 3	p: 1	d: 3	time: 262
+v: 3	p: 2	d: 3	time: 265
+v: 3	p: 3	d: 3	time: 283
+v: 3	p: 4	d: 3	time: 291
+v: 3	p: 5	d: 3	time: 293
+v: 4	p: 1	d: 3	time: 295
+v: 4	p: 2	d: 3	time: 298
+v: 4	p: 3	d: 3	time: 302
+v: 4	p: 4	d: 3	time: 309
+v: 4	p: 5	d: 3	time: 317
+v: 5	p: 1	d: 3	time: 321
+v: 5	p: 2	d: 3	time: 323
+v: 5	p: 3	d: 3	time: 328
+v: 5	p: 4	d: 3	time: 1505
+Test 2
+Quadratic test, Vars - Poly
+minVars: 1 maxVars: 6
+minPoly: 1 maxPoly: 6
+minDegr: 1 maxDegr: 6
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed value varies as:
+minFixed: 1 maxFixed: 6
+With an increment of 2
+
+fixed: 1
+v-p	1	2	3	4	5
+1	125	132	137	140	142
+2	144	151	155	159	162
+3	165	167	169	173	178
+4	181	182	185	191	195
+5	197	199	202	205	208
+
+fixed: 3
+v-p	1	2	3	4	5
+1	209	212	214	219	224
+2	226	228	231	235	239
+3	241	243	248	255	258
+4	260	265	298	303	314
+5	348	349	353	360
