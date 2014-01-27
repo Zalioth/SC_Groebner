@@ -1,67 +1,4 @@
-v: 1	p: 1	d: 1	time: 1641
-v: 1	p: 1	d: 2	time: 1643
-v: 1	p: 1	d: 3	time: 1646
-v: 1	p: 1	d: 4	time: 1650
-v: 1	p: 1	d: 5	time: 1652
-v: 2	p: 1	d: 1	time: 1655
-v: 2	p: 1	d: 2	time: 1656
-v: 2	p: 1	d: 3	time: 1656
-v: 2	p: 1	d: 4	time: 1659
-v: 2	p: 1	d: 5	time: 1661
-v: 3	p: 1	d: 1	time: 1662
-v: 3	p: 1	d: 2	time: 1664
-v: 3	p: 1	d: 3	time: 1665
-v: 3	p: 1	d: 4	time: 1667
-v: 3	p: 1	d: 5	time: 1670
-v: 4	p: 1	d: 1	time: 1672
-v: 4	p: 1	d: 2	time: 1673
-v: 4	p: 1	d: 3	time: 1674
-v: 4	p: 1	d: 4	time: 1678
-v: 4	p: 1	d: 5	time: 1679
-v: 5	p: 1	d: 1	time: 1681
-v: 5	p: 1	d: 2	time: 1682
-v: 5	p: 1	d: 3	time: 1682
-v: 5	p: 1	d: 4	time: 1686
-v: 5	p: 1	d: 5	time: 1688
-v: 1	p: 3	d: 1	time: 1689
-v: 1	p: 3	d: 2	time: 1690
-v: 1	p: 3	d: 3	time: 1692
-v: 1	p: 3	d: 4	time: 1694
-v: 1	p: 3	d: 5	time: 1695
-v: 2	p: 3	d: 1	time: 1696
-v: 2	p: 3	d: 2	time: 1698
-v: 2	p: 3	d: 3	time: 1700
-v: 2	p: 3	d: 4	time: 1702
-v: 2	p: 3	d: 5	time: 1704
-v: 3	p: 3	d: 1	time: 1707
-v: 3	p: 3	d: 2	time: 1710
-v: 3	p: 3	d: 3	time: 1711
-v: 3	p: 3	d: 4	time: 1715
-v: 3	p: 3	d: 5	time: 1721
-v: 4	p: 3	d: 1	time: 1724
-v: 4	p: 3	d: 2	time: 1725
-v: 4	p: 3	d: 3	time: 1728
-v: 4	p: 3	d: 4	time: 1736
-v: 4	p: 3	d: 5	time: 1977
-v: 5	p: 3	d: 1	time: 2074
-v: 5	p: 3	d: 2	time: 2077
-v: 5	p: 3	d: 3	time: 2083
-v: 5	p: 3	d: 4	time: 2117
-An exception occured in test 3:
-Java heap space
-java.lang.OutOfMemoryError: Java heap space
-	at java.math.MutableBigInteger.<init>(Unknown Source)
-	at java.math.BigInteger.remainder(Unknown Source)
-	at java.math.BigInteger.mod(Unknown Source)
-	at edu.jas.arith.ModInteger.<init>(ModInteger.java:42)
-	at edu.jas.arith.ModInteger.multiply(ModInteger.java:477)
-	at edu.jas.arith.ModInteger.multiply(ModInteger.java:19)
-	at edu.jas.poly.GenPolynomial.multiply(GenPolynomial.java:1247)
-	at edu.jas.poly.GenPolynomial.monic(GenPolynomial.java:1271)
-	at edu.jas.gb.GroebnerBaseSeq.GB(GroebnerBaseSeq.java:152)
-	at edu.jas.gb.GroebnerBaseAbstract.GB(GroebnerBaseAbstract.java:298)
-	at Main.calculateGroebnerBase(Main.java:568)
-	at Main.main(Main.java:205)
+
 Test 3
 Quadratic test, Vars - Degr
 minVars: 1 maxVars: 6
@@ -75,16 +12,15 @@ With an increment of 2
 
 fixed: 1
 v-d	1	2	3	4	5
-1	57596	57598	57599	57600	57602
-2	57604	57604	57605	57606	57607
-3	57608	57608	57609	57610	57614
-4	57614	57616	57617	57620	57621
-5	57622	57622	57624	57627	57628
+1	5608	5609	5610	5611	5612
+2	5613	5614	5615	5616	5620
+3	5622	5623	5626	5628	5631
+4	5633	5634	5635	5636	5638
+5	5638	5638	5639	5639	5640
 
 fixed: 3
 v-d	1	2	3	4	5
-1	57630	57632	57633	57635	57639
-2	57642	57648	57650	57651	57653
-3	57655	57655	57658	57660	57665
-4	57672	57673	58370	59414	59557
-5	59573	59574	59575
+1	5643	5645	5646	5648	5651
+2	5653	5655	5656	5658	5664
+3	5667	5669	5673	5681	5686
+4	5690	5694	5698	5701

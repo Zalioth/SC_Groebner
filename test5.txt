@@ -1,23 +1,4 @@
-Test 5 starting...
 
-v: 5	p: 1	d: 5	time: 2321
-v: 5	p: 2	d: 5	time: 2324
-An exception occured in test 5:
-Java heap space
-java.lang.OutOfMemoryError: Java heap space
-	at java.math.BigInteger.remainder(Unknown Source)
-	at java.math.BigInteger.mod(Unknown Source)
-	at edu.jas.arith.ModInteger.<init>(ModInteger.java:42)
-	at edu.jas.arith.ModInteger.multiply(ModInteger.java:477)
-	at edu.jas.arith.ModInteger.multiply(ModInteger.java:19)
-	at edu.jas.poly.GenPolynomial.multiply(GenPolynomial.java:1247)
-	at edu.jas.poly.GenPolynomial.monic(GenPolynomial.java:1271)
-	at edu.jas.gb.GroebnerBaseSeq.GB(GroebnerBaseSeq.java:152)
-	at edu.jas.gb.GroebnerBaseAbstract.GB(GroebnerBaseAbstract.java:298)	Test 6 starting...
-
-
-	at Main.calculateGroebnerBase(Main.java:568)
-	at Main.main(Main.java:372)
 Test 5
 Linear test, Poly
 minVars: 1 maxVars: 10
@@ -32,5 +13,5 @@ Degr: 5
 
 
 Poly	Time
-1	59717
-2	59719
+1	6027
+2	6036

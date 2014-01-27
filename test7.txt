@@ -1,10 +1,4 @@
-v: 5	p: 5	d: 1	time: 50151
-v: 5	p: 5	d: 2	time: 50153
-v: 5	p: 5	d: 3	time: 50254
-v: 5	p: 5	d: 4	time: 101297
-An exception occured in test 7:
-Java heap space
-java.lang.OutOfMemoryError: Java heap space
+
 Test 7
 Linear test, Degr
 minVars: 1 maxVars: 10
@@ -19,6 +13,6 @@ Degr: 5
 
 
 Degr	Time
-1	59734
-2	59738
-3	60055
+1	1208946
+2	1208948
+3	1212896
