@@ -1,0 +1,33 @@
+
+Test 4
+Quadratic test, Poly - Degr
+minVars: 1 maxVars: 6
+minPoly: 1 maxPoly: 6
+minDegr: 1 maxDegr: 6
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed value varies as:
+minFixed: 1 maxFixed: 6
+With an increment of 2
+
+fixed: 1
+p-d	1	2	3	4	5
+1	155	163	167	170	172
+2	174	180	188	197	205
+3	211	213	217	221	227
+4	231	234	238	244	250
+5	253	255	257	261	265
+
+fixed: 3
+p-d	1	2	3	4	5
+1	268	272	275	279	281
+2	283	286	288	290	294
+3	297	300	304	313	328
+4	337	340	342	345	347
+5	350	351	353	356	361
+
+fixed: 5
+p-d	1	2	3	4	5
+1	364	367	368	369	371
+2	372	375	378	380	383
+3	389	392	394

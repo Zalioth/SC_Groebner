@@ -1,0 +1,18 @@
+
+Test 7
+Linear test, Degr
+minVars: 1 maxVars: 10
+minPoly: 1 maxPoly: 10
+minDegr: 1 maxDegr: 10
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed values vary as:
+Vars: 5
+Poly: 5
+Degr: 5
+
+
+Degr	Time
+1	126
+2	141
+3	152704

@@ -1,0 +1,18 @@
+
+Test 5
+Linear test, Poly
+minVars: 1 maxVars: 10
+minPoly: 1 maxPoly: 10
+minDegr: 1 maxDegr: 10
+With an increment of 1
+And a time average calculated from 10 repetitions
+Fixed values vary as:
+Vars: 5
+Poly: 5
+Degr: 5
+
+
+Poly	Time
+1	140
+2	160
+3	3812
