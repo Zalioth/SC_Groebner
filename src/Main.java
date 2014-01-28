@@ -80,14 +80,14 @@ public class Main
 					minDegr = 1;
 					maxDegr = 6;
 
-					increment = 1;
+					increment = 10;
 
 					minFixed = 1;
 					maxFixed = 6;
 
 					incrementFixed = 2;
 
-					repetitions = 10;
+					repetitions = 1;
 
 					test1(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
 							increment, minFixed, maxFixed, incrementFixed,
@@ -109,7 +109,7 @@ public class Main
 
 					incrementFixed = 2;
 
-					repetitions = 10;
+					repetitions = 100;
 
 					test2(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
 							increment, minFixed, maxFixed, incrementFixed,
@@ -341,7 +341,7 @@ public class Main
 					for (int p = minPoly; p < maxPoly; p += increment)
 					{
 						int d = f;
-						long sum = 0;
+						double sum = 0;
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
@@ -354,10 +354,11 @@ public class Main
 							// the Gröbner base calculation can be freed.
 							System.gc();
 
+//							System.out.println(timer.getTime());
 							sum += timer.getTime();
 						}
 
-						long average = sum / repetitions;
+						double average = (double)sum / (double)repetitions;
 
 						// Write the time in a file
 						System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
@@ -427,7 +428,7 @@ public class Main
 					for (int d = minDegr; d < maxDegr; d += increment)
 					{
 						int p = f;
-						long sum = 0;
+						double sum = 0;
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
@@ -443,7 +444,7 @@ public class Main
 							sum += timer.getTime();
 						}
 
-						long average = sum / repetitions;
+						double average = sum / repetitions;
 
 						// Write the time in a file
 						System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
@@ -513,7 +514,7 @@ public class Main
 					for (int d = minDegr; d < maxDegr; d += increment)
 					{
 						int v = f;
-						long sum = 0;
+						double sum = 0;
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
@@ -529,7 +530,7 @@ public class Main
 							sum += timer.getTime();
 						}
 
-						long average = sum / repetitions;
+						double average = sum / repetitions;
 
 						// Write the time in a file
 						System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
@@ -591,7 +592,7 @@ public class Main
 			{
 				int v = fixedVars;
 				int d = fixedDegr;
-				long sum = 0;
+				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
 					// Execute the method #calculateGroebnerBase and measure it's
@@ -607,7 +608,7 @@ public class Main
 					sum += timer.getTime();
 				}
 
-				long average = sum / repetitions;
+				double average = sum / repetitions;
 
 				// Write the time in a file
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
@@ -665,7 +666,7 @@ public class Main
 			{
 				int p = fixedPoly;
 				int d = fixedDegr;
-				long sum = 0;
+				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
 					// Execute the method #calculateGroebnerBase and measure it's
@@ -681,7 +682,7 @@ public class Main
 					sum += timer.getTime();
 				}
 
-				long average = sum / repetitions;
+				double average = sum / repetitions;
 
 				// Write the time in a file
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
@@ -739,7 +740,7 @@ public class Main
 			{
 				int v = fixedVars;
 				int p = fixedPoly;
-				long sum = 0;
+				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
 					// Execute the method #calculateGroebnerBase and measure it's
@@ -755,7 +756,7 @@ public class Main
 					sum += timer.getTime();
 				}
 
-				long average = sum / repetitions;
+				double average = sum / repetitions;
 
 				// Write the time in a file
 				System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
