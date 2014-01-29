@@ -18,6 +18,24 @@ public class Main
 {
 	public static void main(String[] args) throws IOException
 	{
+		int vtest = 5, ptest = 5, dtest = 5;
+		
+		
+		Time timer = new Time();
+		timer.start();
+		calculateGroebnerBase(vtest, ptest, dtest);
+		timer.stop();
+		// Suggest the Garbage Collector to run, so all the resources
+		// taken by
+		// the Gröbner base calculation can be freed.
+		System.gc();
+
+		// Write the time in a file
+		System.out.println(("v: " + vtest + "\tp: " + ptest + "\td: " + dtest
+				+ "\ttime: " + timer.getTime()));
+		
+		System.exit(0);
+		
 		// Test variables
 		int minVars = 1;
 		int maxVars = 6;
