@@ -825,6 +825,8 @@ public class Main
 		// Executing this way to save Java from having to allocate memory for the
 		// returning
 		// Gröbner base that will not be used.
+		
+		//Other functions used
 		gb.GB(numberOfVariables,polynomials);
 	}
 }
