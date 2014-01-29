@@ -212,8 +212,8 @@ public class Main
 
 					increment = 1;
 
-					fixedVars = 5;
-					fixedPoly = 5;
+					fixedVars = 4;
+					fixedPoly = 4;
 					fixedDegr = 5;
 
 					repetitions = 10;
@@ -807,6 +807,6 @@ public class Main
 		// Executing this way to save Java from having to allocate memory for the
 		// returning
 		// Gröbner base that will not be used.
-		gb.GB(polynomials);
+		gb.GB(numberOfVariables,polynomials);
 	}
 }
