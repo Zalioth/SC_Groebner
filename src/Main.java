@@ -16,47 +16,82 @@ import edu.jas.poly.TermOrder;
 
 public class Main
 {
+	static int minVars;
+	static int maxVars;
+	static int minPoly;
+	static int maxPoly;
+	static int minDegr;
+	static int maxDegr;
+
+	static int increment;
+
+	static int minFixed;
+	static int maxFixed;
+
+	static int incrementFixed;
+
+	static int repetitions;
+
+	static int fixedVars;
+	static int fixedPoly;
+	static int fixedDegr;
+	
+	public static void setLinearTestValues()
+	{
+		// Linear test
+		minVars = 20;
+		maxVars = 200;
+		minPoly = 20;
+		maxPoly = 200;
+		minDegr = 20;
+		maxDegr = 200;
+
+		increment = 1;
+
+		fixedVars = 80;
+		fixedPoly = 80;
+		fixedDegr = 80;
+
+		repetitions = 10;
+	}
+	
+	public static void setQuadraticTestValues()
+	{
+		// Quadratic test
+		minVars = 20;
+		maxVars = 200;
+		minPoly = 20;
+		maxPoly = 200;
+		minDegr = 20;
+		maxDegr = 200;
+
+		increment = 5;
+
+		minFixed = 80;
+		maxFixed = 81;
+
+		incrementFixed = 10;
+
+		repetitions = 10;
+	}
+	
+	public static void setCubicTestValues()
+	{
+		// Cubic test
+		minVars = 20;
+		maxVars = 200;
+		minPoly = 20;
+		maxPoly = 200;
+		minDegr = 20;
+		maxDegr = 200;
+
+		increment = 1;
+
+		repetitions = 40;
+	}
+	
 	public static void main(String[] args) throws IOException
 	{
-		int vtest = 5, ptest = 5, dtest = 5;
-		
-		
-		Time timer = new Time();
-		timer.start();
-		calculateGroebnerBase(vtest, ptest, dtest);
-		timer.stop();
-		// Suggest the Garbage Collector to run, so all the resources
-		// taken by
-		// the Gröbner base calculation can be freed.
-		System.gc();
-
-		// Write the time in a file
-		System.out.println(("v: " + vtest + "\tp: " + ptest + "\td: " + dtest
-				+ "\ttime: " + timer.getTime()));
-		
-		System.exit(0);
-		
-		// Test variables
-		int minVars = 1;
-		int maxVars = 6;
-		int minPoly = 1;
-		int maxPoly = 6;
-		int minDegr = 1;
-		int maxDegr = 6;
-
-		int increment = 1;
-
-		int minFixed = 1;
-		int maxFixed = 6;
-
-		int incrementFixed = 2;
-
-		int repetitions = 10;
-
-		int fixedVars = 5;
-		int fixedPoly = 5;
-		int fixedDegr = 5;
-
 		// Menu variables
 		boolean end = false;
 		Scanner scan = new Scanner(System.in);
@@ -90,155 +125,25 @@ public class Main
 					System.out.println("Exiting...");
 					break;
 				case 1:
-					// Cubic test
-					minVars = 1;
-					maxVars = 6;
-					minPoly = 1;
-					maxPoly = 6;
-					minDegr = 1;
-					maxDegr = 6;
-
-					increment = 10;
-
-					minFixed = 1;
-					maxFixed = 6;
-
-					incrementFixed = 2;
-
-					repetitions = 1;
-
-					test1(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test1();
 					break;
 				case 2:
-					// Quadratic test
-					minVars = 1;
-					maxVars = 6;
-					minPoly = 1;
-					maxPoly = 6;
-					minDegr = 1;
-					maxDegr = 6;
-
-					increment = 1;
-
-					minFixed = 1;
-					maxFixed = 6;
-
-					incrementFixed = 2;
-
-					repetitions = 100;
-
-					test2(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test2();
 					break;
 				case 3:
-					// Quadratic test
-					minVars = 1;
-					maxVars = 6;
-					minPoly = 1;
-					maxPoly = 6;
-					minDegr = 1;
-					maxDegr = 6;
-
-					increment = 1;
-
-					minFixed = 1;
-					maxFixed = 6;
-
-					incrementFixed = 2;
-
-					repetitions = 10;
-
-					test3(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test3();
 					break;
 				case 4:
-					// Quadratic test
-					minVars = 1;
-					maxVars = 6;
-					minPoly = 1;
-					maxPoly = 6;
-					minDegr = 1;
-					maxDegr = 6;
-
-					increment = 1;
-
-					minFixed = 1;
-					maxFixed = 6;
-
-					incrementFixed = 2;
-
-					repetitions = 10;
-
-					test4(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test4();
 					break;
 				case 5:
-					// Linear test
-					minVars = 1;
-					maxVars = 10;
-					minPoly = 1;
-					maxPoly = 10;
-					minDegr = 1;
-					maxDegr = 10;
-
-					increment = 1;
-
-					fixedVars = 5;
-					fixedPoly = 5;
-					fixedDegr = 5;
-
-					repetitions = 10;
-
-					test5(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test5();
 					break;
 				case 6:
-					// Linear test
-					minVars = 1;
-					maxVars = 10;
-					minPoly = 1;
-					maxPoly = 10;
-					minDegr = 1;
-					maxDegr = 10;
-
-					increment = 1;
-
-					fixedVars = 5;
-					fixedPoly = 5;
-					fixedDegr = 5;
-
-					repetitions = 10;
-
-					test6(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test6();
 					break;
 				case 7:
-					// Linear test
-					minVars = 1;
-					maxVars = 10;
-					minPoly = 1;
-					maxPoly = 10;
-					minDegr = 1;
-					maxDegr = 10;
-
-					increment = 1;
-
-					fixedVars = 4;
-					fixedPoly = 4;
-					fixedDegr = 5;
-
-					repetitions = 10;
-
-					test7(minVars, maxVars, minPoly, maxPoly, minDegr, maxDegr,
-							increment, minFixed, maxFixed, incrementFixed,
-							repetitions, fixedVars, fixedPoly, fixedDegr);
+					test7();
 					break;
 				default:
 					System.out
@@ -260,11 +165,10 @@ public class Main
 		scan.close();
 	}
 
-	public static void test1(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test1() throws IOException
 	{
+		setCubicTestValues();
+		
 		FileWriter fw1;
 		PrintWriter pw1;
 
@@ -283,20 +187,29 @@ public class Main
 				{
 					for (int d = minDegr; d < maxDegr; ++d)
 					{
-						// Execute the method #calculateGroebnerBase and measure it's
-						// time
-						timer.start();
-						calculateGroebnerBase(v, p, d);
-						timer.stop();
-						// Suggest the Garbage Collector to run, so all the resources
-						// taken by
-						// the Gröbner base calculation can be freed.
-						System.gc();
+						double sum = 0;
+						for (int r = 0; r < repetitions; ++r)
+						{
+							// Execute the method #calculateGroebnerBase and measure its
+							// time
+							timer.start();
+							calculateGroebnerBase(v, p, d);
+							timer.stop();
+							// Suggest the Garbage Collector to run, so all the resources
+							// taken by
+							// the Gröbner base calculation can be freed.
+							System.gc();
+
+							//	System.out.println(timer.getTime());
+							sum += timer.getTime();
+						}
+
+						double average = (double)sum / (double)repetitions;
 
 						// Write the time in a file
 						System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
-								+ "\ttime: " + timer.getTime()));
-						pw1.println((v + "\t" + p + "\t" + d + "\t" + timer.getTime()));
+								+ "\ttime: " + average));
+						pw1.println((v + "\t" + p + "\t" + d + "\t" + average));
 					}
 				}
 			}
@@ -313,11 +226,10 @@ public class Main
 		}
 	}
 
-	public static void test2(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test2() throws IOException
 	{
+		setQuadraticTestValues();
+		
 		FileWriter fw2;
 		PrintWriter pw2;
 
@@ -363,7 +275,7 @@ public class Main
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
-							// it's time
+							// its time
 							timer.start();
 							calculateGroebnerBase(v, p, d);
 							timer.stop();
@@ -372,7 +284,7 @@ public class Main
 							// the Gröbner base calculation can be freed.
 							System.gc();
 
-//							System.out.println(timer.getTime());
+							//	System.out.println(timer.getTime());
 							sum += timer.getTime();
 						}
 
@@ -382,6 +294,7 @@ public class Main
 						System.out.println(("v: " + v + "\tp: " + p + "\td: " + d
 								+ "\ttime: " + average));
 						pw2.print(("\t" + average));
+				
 					}
 					pw2.print("\n");
 				}
@@ -400,11 +313,10 @@ public class Main
 		}
 	}
 
-	public static void test3(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test3() throws IOException
 	{
+		setQuadraticTestValues();
+		
 		FileWriter fw3;
 		PrintWriter pw3;
 
@@ -450,7 +362,7 @@ public class Main
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
-							// it's time
+							// its time
 							timer.start();
 							calculateGroebnerBase(v, p, d);
 							timer.stop();
@@ -486,11 +398,10 @@ public class Main
 		}
 	}
 
-	public static void test4(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test4() throws IOException
 	{
+		setQuadraticTestValues();
+		
 		FileWriter fw4;
 		PrintWriter pw4;
 
@@ -536,7 +447,7 @@ public class Main
 						for (int r = 0; r < repetitions; ++r)
 						{
 							// Execute the method #calculateGroebnerBase and measure
-							// it's time
+							// its time
 							timer.start();
 							calculateGroebnerBase(v, p, d);
 							timer.stop();
@@ -572,11 +483,10 @@ public class Main
 		}
 	}
 
-	public static void test5(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test5() throws IOException
 	{
+		setLinearTestValues();
+		
 		FileWriter fw5;
 		PrintWriter pw5;
 
@@ -613,7 +523,7 @@ public class Main
 				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
-					// Execute the method #calculateGroebnerBase and measure it's
+					// Execute the method #calculateGroebnerBase and measure its
 					// time
 					timer.start();
 					calculateGroebnerBase(v, p, d);
@@ -646,11 +556,10 @@ public class Main
 		}
 	}
 
-	public static void test6(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test6() throws IOException
 	{
+		setLinearTestValues();
+		
 		FileWriter fw6;
 		PrintWriter pw6;
 
@@ -687,7 +596,7 @@ public class Main
 				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
-					// Execute the method #calculateGroebnerBase and measure it's
+					// Execute the method #calculateGroebnerBase and measure its
 					// time
 					timer.start();
 					calculateGroebnerBase(v, p, d);
@@ -720,11 +629,10 @@ public class Main
 		}
 	}
 
-	public static void test7(int minVars, int maxVars, int minPoly, int maxPoly,
-			int minDegr, int maxDegr, int increment, int minFixed, int maxFixed,
-			int incrementFixed, int repetitions, int fixedVars, int fixedPoly,
-			int fixedDegr) throws IOException
+	public static void test7() throws IOException
 	{
+		setLinearTestValues();
+		
 		FileWriter fw7;
 		PrintWriter pw7;
 
@@ -761,7 +669,7 @@ public class Main
 				double sum = 0;
 				for (int r = 0; r < repetitions; ++r)
 				{
-					// Execute the method #calculateGroebnerBase and measure it's
+					// Execute the method #calculateGroebnerBase and measure its
 					// time
 					timer.start();
 					calculateGroebnerBase(v, p, d);
@@ -819,7 +727,7 @@ public class Main
 
 		GroebnerBase<ModInteger> gb = GBFactory
 				.getImplementation(coefficientFactory);
-		// List<GenPolynomial<ModInteger>> G = gb.GB(polynomials);
+		// List<GenPolynomial<ModInteger>> G = gb.GB(numberOfVariables, polynomials);
 		// G holds the Gröbner base corresponding to the polynomials generated.
 
 		// Executing this way to save Java from having to allocate memory for the
@@ -827,6 +735,6 @@ public class Main
 		// Gröbner base that will not be used.
 		
 		//Other functions used
-		gb.GB(numberOfVariables,polynomials);
+		gb.GB(numberOfVariables, polynomials);
 	}
 }
