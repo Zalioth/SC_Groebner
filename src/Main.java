@@ -52,7 +52,7 @@ public class Main
 		fixedPoly = 80;
 		fixedDegr = 80;
 
-		repetitions = 10;
+		repetitions = 50;
 	}
 	
 	public static void setQuadraticTestValues()
@@ -72,7 +72,7 @@ public class Main
 
 		incrementFixed = 10;
 
-		repetitions = 10;
+		repetitions = 50;
 	}
 	
 	public static void setCubicTestValues()
@@ -87,7 +87,7 @@ public class Main
 
 		increment = 1;
 
-		repetitions = 40;
+		repetitions = 50;
 	}
 	
 	public static void main(String[] args) throws IOException
